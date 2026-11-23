@@ -1,0 +1,11 @@
+# Started automatically by Spring Boot's Docker Compose support on ./gradlew bootRun.
+# Boot detects the postgres image and wires the datasource for you (no URL in application.yml).
+services:
+  postgres:
+    image: 'postgres:17'
+    environment:
+      - 'POSTGRES_DB=inkwell'
+      - 'POSTGRES_USER=inkwell'
+      - 'POSTGRES_PASSWORD=inkwell'  # local dev only
+    ports:
+      - '5432'

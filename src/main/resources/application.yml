@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: inkwell
+  profiles:
+    default: dev
+  jpa:
+    # Keep DB access inside the service layer (see Module 3: lazy loading).
+    open-in-view: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+# Your app's own settings. Module 1, step 3: bind these to an
+# InkwellProperties record with @ConfigurationProperties("inkwell").
+inkwell:
+  site-name: Inkwell
+  default-page-size: 20
