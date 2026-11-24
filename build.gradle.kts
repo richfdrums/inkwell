@@ -24,6 +24,9 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
 
+    // Module 1: generates metadata for @ConfigurationProperties (IDE autocomplete/validation of inkwell.* keys)
+    annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+
     // Module 3: persistence (Postgres + JPA + Flyway migrations)
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-flyway")
